@@ -75,7 +75,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .container {
-    max-width: 960px;
+    max-width: 1000px;
+    padding: 0 20px;
     width: 100%;
     margin: 0 auto;
   }

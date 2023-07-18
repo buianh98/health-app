@@ -1,4 +1,6 @@
 import { styled } from "styled-components";
+import Typography from "../Typography";
+import theme from "../../../../utils/styles/theme";
 
 const MyRecordSessionHeader = styled.div`
   display: flex;
@@ -13,18 +15,7 @@ const MyRecordSessionHeader = styled.div`
   }
 
   .title {
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 18px;
-    letter-spacing: 0.15px;
     white-space: pre-wrap;
-  }
-
-  .time {
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 27px;
-    letter-spacing: 0.11px;
   }
 `;
 
@@ -39,8 +30,26 @@ const MyRecordSessionHeaderComponent: React.FC<MyRecordSessionHeaderProps> = ({
 }) => {
   return (
     <MyRecordSessionHeader>
-      <h4 className="title font-inter">{title}</h4>
-      <h4 className="time font-inter">{time}</h4>
+      <Typography
+        fontSize="15px"
+        lineHeight="18px"
+        fontWeight={400}
+        letterSpacing="0.15px"
+        className="title font-inter"
+        color={theme.colors.white}
+      >
+        {title}
+      </Typography>
+      <Typography
+        fontSize="22px"
+        lineHeight="27px"
+        fontWeight={400}
+        letterSpacing="0.11px"
+        className="title font-inter"
+        color={theme.colors.white}
+      >
+        {time}
+      </Typography>
     </MyRecordSessionHeader>
   );
 };

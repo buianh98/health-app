@@ -1,4 +1,6 @@
 import { styled } from "styled-components";
+import Typography from "../../atoms/Typography";
+import theme from "../../../../utils/styles/theme";
 
 const FoodCagegoryCard = styled.div`
   display: flex;
@@ -11,11 +13,6 @@ const FoodCagegoryCard = styled.div`
   .text {
     padding: 8px;
     background: ${(props) => props.theme.colors.primary300};
-    color: ${(props) => props.theme.colors.white};
-    font-family: Inter;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 18px;
   }
 `;
 
@@ -41,7 +38,16 @@ const FoodCagegoryCardComponent: React.FC<FoodCagegoryCardProps> = ({
         backgroundImage: image,
       }}
     >
-      <div className="text">{hexagonContent}</div>
+      <Typography
+        fontSize="15px"
+        lineHeight="18px"
+        fontWeight={400}
+        component="div"
+        color={theme.colors.white}
+        className="text font-inter"
+      >
+        {hexagonContent}
+      </Typography>
     </FoodCagegoryCard>
   );
 };

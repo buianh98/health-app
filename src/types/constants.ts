@@ -4,6 +4,9 @@ import MyRecommend3 from "./../ui/assets/images/MyRecommend-3.jpg";
 import KnifeIcon from "./../ui/assets/icons/icon_knife.svg";
 import CupIcon from "./../ui/assets/icons/icon_cup.svg";
 import D1Image from "./../ui/assets/images/d01.jpg";
+import D2Image from "./../ui/assets/images/d02.jpg";
+import D3Image from "./../ui/assets/images/l01.jpg";
+import D4Image from "./../ui/assets/images/l02.jpg";
 import { FoodType } from "./type";
 
 export const DEFAULT_PER_PAGE = 8;
@@ -427,17 +430,17 @@ export const foodCards = [
   },
   {
     title: "05.21.Lunch",
-    image: D1Image,
+    image: D2Image,
     type: "lunch",
   },
   {
     title: "05.21.Dinner",
-    image: D1Image,
+    image: D3Image,
     type: "dinner",
   },
   {
     title: "05.21.Snack",
-    image: D1Image,
+    image: D4Image,
     type: "snack",
   },
 
@@ -448,17 +451,17 @@ export const foodCards = [
   },
   {
     title: "05.20.Lunch",
-    image: D1Image,
+    image: D2Image,
     type: "lunch",
   },
   {
     title: "05.20.Dinner",
-    image: D1Image,
+    image: D3Image,
     type: "dinner",
   },
   {
     title: "05.20.Snack",
-    image: D1Image,
+    image: D4Image,
     type: "snack",
   },
 
@@ -469,17 +472,17 @@ export const foodCards = [
   },
   {
     title: "05.19.Lunch",
-    image: D1Image,
+    image: D2Image,
     type: "lunch",
   },
   {
     title: "05.19.Dinner",
-    image: D1Image,
+    image: D3Image,
     type: "dinner",
   },
   {
     title: "05.19.Snack",
-    image: D1Image,
+    image: D4Image,
     type: "snack",
   },
 
@@ -490,17 +493,17 @@ export const foodCards = [
   },
   {
     title: "05.18.Lunch",
-    image: D1Image,
+    image: D2Image,
     type: "lunch",
   },
   {
     title: "05.18.Dinner",
-    image: D1Image,
+    image: D3Image,
     type: "dinner",
   },
   {
     title: "05.18.Snack",
-    image: D1Image,
+    image: D4Image,
     type: "snack",
   },
 
@@ -511,17 +514,17 @@ export const foodCards = [
   },
   {
     title: "05.17.Lunch",
-    image: D1Image,
+    image: D2Image,
     type: "lunch",
   },
   {
     title: "05.17.Dinner",
-    image: D1Image,
+    image: D4Image,
     type: "dinner",
   },
   {
     title: "05.17.Snack",
-    image: D1Image,
+    image: D3Image,
     type: "snack",
   },
 
@@ -532,17 +535,17 @@ export const foodCards = [
   },
   {
     title: "05.16.Lunch",
-    image: D1Image,
+    image: D2Image,
     type: "lunch",
   },
   {
     title: "05.16.Dinner",
-    image: D1Image,
+    image: D3Image,
     type: "dinner",
   },
   {
     title: "05.16.Snack",
-    image: D1Image,
+    image: D4Image,
     type: "snack",
   },
 
@@ -553,12 +556,12 @@ export const foodCards = [
   },
   {
     title: "05.15.Lunch",
-    image: D1Image,
+    image: D2Image,
     type: "lunch",
   },
   {
     title: "05.15.Dinner",
-    image: D1Image,
+    image: D3Image,
     type: "dinner",
   },
   {
@@ -574,12 +577,12 @@ export const foodCards = [
   },
   {
     title: "05.14.Lunch",
-    image: D1Image,
+    image: D2Image,
     type: "lunch",
   },
   {
     title: "05.14.Dinner",
-    image: D1Image,
+    image: D3Image,
     type: "dinner",
   },
   {
@@ -590,7 +593,7 @@ export const foodCards = [
 
   {
     title: "05.13.Morning",
-    image: D1Image,
+    image: D4Image,
     type: "morning",
   },
   {
@@ -600,12 +603,12 @@ export const foodCards = [
   },
   {
     title: "05.13.Dinner",
-    image: D1Image,
+    image: D2Image,
     type: "dinner",
   },
   {
     title: "05.13.Snack",
-    image: D1Image,
+    image: D4Image,
     type: "snack",
   },
 ];

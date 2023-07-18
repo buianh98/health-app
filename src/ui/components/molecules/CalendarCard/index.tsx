@@ -1,4 +1,6 @@
 import { styled } from "styled-components";
+import theme from "../../../../utils/styles/theme";
+import Typography from "../../atoms/Typography";
 
 const CalendarCard = styled.div`
   width: 100%;
@@ -13,21 +15,12 @@ const CalendarCard = styled.div`
   }
 
   .time-text {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 22px;
-    letter-spacing: 0.09px;
-    color: ${(props) => props.theme.colors.dark500};
     margin-bottom: 8px;
     white-space: pre-wrap;
   }
 
   .description,
   .text {
-    color: ${(props) => props.theme.colors.dark500};
-    font-size: 12px;
-    line-height: 17px;
-    letter-spacing: 0.06px;
     margin-bottom: 0;
   }
 
@@ -59,9 +52,37 @@ const CalendarCardComponent: React.FC<CalendarCardProps> = ({
     <CalendarCard className={className} onClick={onClick}>
       <div className="content">
         <div className="content-box">
-          <h3 className="time-text font-inter">{time}</h3>
-          <p className="text">{title}</p>
-          <p className="description">{description}</p>
+          <Typography
+            fontSize="18px"
+            lineHeight="22px"
+            fontWeight={400}
+            letterSpacing="0.09px"
+            component="h4"
+            color={theme.colors.drak500}
+            className="time-text font-inter"
+          >
+            {time}
+          </Typography>
+          <Typography
+            fontSize="12px"
+            lineHeight="17px"
+            letterSpacing="0.06px"
+            component="p"
+            color={theme.colors.drak500}
+            className="text"
+          >
+            {title}
+          </Typography>
+          <Typography
+            fontSize="12px"
+            lineHeight="17px"
+            letterSpacing="0.06px"
+            component="p"
+            color={theme.colors.drak500}
+            className="description"
+          >
+            {description}
+          </Typography>
         </div>
       </div>
     </CalendarCard>

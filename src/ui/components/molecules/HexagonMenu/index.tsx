@@ -2,6 +2,8 @@ import { styled } from "styled-components";
 import SVG from "react-inlinesvg";
 
 import HexagonIcon from "./../../../assets/icons/hexagon_icon.svg";
+import Typography from "../../atoms/Typography";
+import theme from "../../../../utils/styles/theme";
 
 const HexagonMenu = styled.div`
   display: flex;
@@ -12,12 +14,6 @@ const HexagonMenu = styled.div`
   height: 116px;
   cursor: pointer;
   position: relative;
-
-  color: ${(props) => props.theme.colors.white};
-  font-family: Inter;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 24px;
 
   .hexagon-icon {
     position: absolute;
@@ -48,7 +44,17 @@ const HexagonMenuComponent: React.FC<HexagonMenuProps> = ({
     <div className="icon">
       <SVG src={icon} />
     </div>
-    <div className="text">{hexagonContent}</div>
+
+    <Typography
+      fontSize="20px"
+      lineHeight="24px"
+      fontWeight={400}
+      component="div"
+      color={theme.colors.white}
+      className="font-inter"
+    >
+      {hexagonContent}
+    </Typography>
   </HexagonMenu>
 );
 

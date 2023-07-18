@@ -1,4 +1,6 @@
 import { styled } from "styled-components";
+import Typography from "../../atoms/Typography";
+import theme from "../../../../utils/styles/theme";
 
 const ColumnThumnailCard = styled.div`
   width: 100%;
@@ -40,19 +42,13 @@ const ColumnThumnailCard = styled.div`
     height: 100%;
   }
 
-  .title,
-  .description {
+  .title {
     text-align: center;
   }
 
   .title {
-    font-size: 15px;
-    line-height: 22px;
     margin-bottom: 0;
     margin-top: 8px;
-    letter-spacing: 0.075px;
-    color: ${(props) => props.theme.colors.drak500};
-    font-weight: 300;
 
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -102,7 +98,17 @@ const ColumnThumnailCardComponent: React.FC<ColumnThumnailCardProps> = ({
         </div>
       </div>
       <div className="content">
-        <h3 className="title ">{title}</h3>
+        <Typography
+          fontSize="15px"
+          lineHeight="22px"
+          letterSpacing="0.075px"
+          fontWeight={300}
+          component="p"
+          color={theme.colors.drak500}
+          className="title"
+        >
+          {title}
+        </Typography>
 
         {tags.length && (
           <div className="tags">

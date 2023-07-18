@@ -1,4 +1,6 @@
 import { styled } from "styled-components";
+import Typography from "../../atoms/Typography";
+import theme from "../../../../utils/styles/theme";
 
 const ColumnThumnailCard = styled.div`
   width: 100%;
@@ -20,10 +22,6 @@ const ColumnThumnailCard = styled.div`
   }
 
   .title {
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 27px;
-    letter-spacing: 0.11px;
     color: ${(props) => props.theme.colors.primary300};
   }
 
@@ -36,11 +34,6 @@ const ColumnThumnailCard = styled.div`
   }
 
   .description {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 26px;
-    letter-spacing: 0.11px;
-    color: ${(props) => props.theme.colors.white};
     margin-top: 8px;
     margin-bottom: 0;
   }
@@ -62,8 +55,29 @@ const ColumnThumnailCardComponent: React.FC<ColumnThumnailCardProps> = ({
   return (
     <ColumnThumnailCard className={className} onClick={onClick}>
       <div className="content">
-        <h3 className="title font-inter">{title}</h3>
-        <div className="line" /> <p className="description">{description}</p>
+        <Typography
+          fontSize="22px"
+          lineHeight="27px"
+          letterSpacing="0.11px"
+          fontWeight={400}
+          component="h3"
+          color={theme.colors.primary300}
+          className="title font-inter"
+        >
+          {title}
+        </Typography>
+        <div className="line" />
+        <Typography
+          fontSize="18px"
+          lineHeight="26px"
+          letterSpacing="0.11px"
+          fontWeight={400}
+          component="p"
+          color={theme.colors.white}
+          className="description"
+        >
+          {title}
+        </Typography>
       </div>
     </ColumnThumnailCard>
   );

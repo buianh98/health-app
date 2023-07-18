@@ -1,4 +1,6 @@
 import { styled } from "styled-components";
+import Typography from "../../atoms/Typography";
+import theme from "../../../../utils/styles/theme";
 
 const MyRecordCard = styled.div`
   width: 100%;
@@ -24,21 +26,9 @@ const MyRecordCard = styled.div`
     flex-direction: column;
   }
 
-  .title {
-    color: ${(props) => props.theme.colors.primary300};
-    font-family: Inter;
-    font-size: 25px;
-    line-height: 30px;
-    letter-spacing: 0.125px;
-    font-weight: 400;
-  }
-
   .description {
     padding: 2px 12px;
     background: ${(props) => props.theme.colors.primary400};
-    color: ${(props) => props.theme.colors.white};
-    font-size: 14px;
-    line-height: 20px;
     margin-bottom: 0;
   }
 
@@ -86,8 +76,27 @@ const MyRecordCardComponent: React.FC<MyRecordCardProps> = ({
 
       <div className="content">
         <div className="content-box">
-          <h3 className="title">{title}</h3>
-          <p className="description">{description}</p>
+          <Typography
+            fontSize="25px"
+            lineHeight="30px"
+            fontWeight={400}
+            letterSpacing="0.125px"
+            component="h3"
+            color={theme.colors.primary300}
+            className="font-inter"
+          >
+            {title}
+          </Typography>
+
+          <Typography
+            fontSize="14px"
+            lineHeight="20px"
+            component="p"
+            color={theme.colors.white}
+            className="description"
+          >
+            {description}
+          </Typography>
         </div>
       </div>
     </MyRecordCard>

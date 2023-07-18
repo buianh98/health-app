@@ -33,6 +33,7 @@ const Top = styled.div`
 
     &__avatar {
       width: 40%;
+      background-size: cover !important;
     }
 
     &__chart {

@@ -1,5 +1,7 @@
 import { styled } from "styled-components";
 import { MyRecordData } from "../../../../types/type";
+import Typography from "../Typography";
+import theme from "../../../../utils/styles/theme";
 
 const MyRecordRow = styled.div`
   display: flex;
@@ -13,29 +15,6 @@ const MyRecordRow = styled.div`
   .title {
     margin-bottom: 0;
   }
-
-  .title {
-    font-size: 15px;
-    line-height: 22px;
-    letter-spacing: 0.075px;
-    color: ${(props) => props.theme.colors.white};
-  }
-
-  .description {
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 18px;
-    letter-spacing: 0.075px;
-    color: ${(props) => props.theme.colors.primary300};
-  }
-
-  .time {
-    color: ${(props) => props.theme.colors.primary300};
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 22px;
-    letter-spacing: 0.09px;
-  }
 `;
 
 type MyRecordRowProps = {
@@ -46,10 +25,41 @@ const MyRecordRowComponent: React.FC<MyRecordRowProps> = ({ myRecordData }) => {
   return (
     <MyRecordRow>
       <div>
-        <h4 className="title">{myRecordData.title}</h4>
-        <p className="description">{myRecordData.description}</p>
+        <Typography
+          fontSize="15px"
+          lineHeight="22px"
+          fontWeight={400}
+          letterSpacing="0.075px"
+          component="h4"
+          color={theme.colors.white}
+          className="title"
+        >
+          {myRecordData.title}
+        </Typography>
+        <Typography
+          fontSize="15px"
+          lineHeight="18px"
+          fontWeight={400}
+          letterSpacing="0.075px"
+          component="p"
+          color={theme.colors.primary300}
+          className="description"
+        >
+          {myRecordData.description}
+        </Typography>
+        {/* <h4 className="title">{myRecordData.title}</h4> */}
       </div>
-      <h4 className="time">{myRecordData.time}</h4>
+      <Typography
+        fontSize="18px"
+        lineHeight="22px"
+        fontWeight={400}
+        letterSpacing="0.09px"
+        component="h4"
+        color={theme.colors.primary300}
+        className="time"
+      >
+        {myRecordData.time}
+      </Typography>
     </MyRecordRow>
   );
 };
